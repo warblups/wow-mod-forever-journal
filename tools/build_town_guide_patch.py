@@ -34,6 +34,9 @@ NAME = "Town Guide"
 DESCRIPTION = "Ask where to find trainers, flight masters, the bank and other townsfolk. " \
               "Search by name, title or zone and the place is flagged on your map."
 
+NAME_FR = "Guide des villes"
+DESCRIPTION_FR = "Indique où trouver les maîtres de classe, maîtres de vol, banquiers et autres habitants. Recherchez par nom, titre ou zone ; l’emplacement est indiqué sur votre carte."
+
 FIELDS = 234
 RECORD_SIZE = FIELDS * 4
 
@@ -108,7 +111,9 @@ def town_guide_row(rows, strings):
     for field in STRING_FIELDS:
         row[field] = 0
     row[F_NAME] = add_string(strings, NAME)
+    row[F_NAME + 2] = add_string(strings, NAME_FR)
     row[F_DESCRIPTION] = add_string(strings, DESCRIPTION)
+    row[F_DESCRIPTION + 2] = add_string(strings, DESCRIPTION_FR)
     return row
 
 
